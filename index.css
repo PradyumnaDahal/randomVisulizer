@@ -1,0 +1,22 @@
+body{
+  margin: 0px;
+}
+.histogram {
+  height          : 100px;
+  background-color: rgba(66, 134, 244, 0.8);
+  float:left;
+  /*border: 1px solid white;*/
+}
+.histogram:nth-child(even){
+  background-color: rgba(66, 134, 244, 0.7);
+}
+.histogramContainer{
+  height: 30%;
+}
+.histogramCount{
+  text-align: center;
+  color: blue;
+  font-weight: bold;
+  font-size: 40px;
+  font-size: 1vw;
+}
