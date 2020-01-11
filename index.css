@@ -1,6 +1,8 @@
 body{
   margin: 0px;
 }
+
+
 .histogram {
   height          : 100px;
   background-color: rgba(66, 134, 244, 0.8);
@@ -9,6 +11,9 @@ body{
 }
 .histogram:nth-child(even){
   background-color: rgba(66, 134, 244, 0.7);
+}
+.selectedHistogram{
+  background-color:rgba(255, 140, 105, 1.0) !important;
 }
 .histogramContainer{
   height: 30%;

@@ -1,5 +1,6 @@
 var histo;
 var animatedArray;
+var seconds = 8;
 
 function changeHistogram(array){
   var list = removeDuplicates(array).sort(function(a, b){return a-b});
@@ -20,9 +21,10 @@ function changeHistogram(array){
 
   animatedArray = new Array(list.length).fill(0);
   histo = new Array(list.length).fill(0);
+  seconds = document.getElementById("seconds").value;
   animateChange(0,array, denominator);
-
 }
+
 function animateChange(i, array, denominator){
   if(i>array.length){
     return //loops until i is more than array length
@@ -31,18 +33,23 @@ function animateChange(i, array, denominator){
   histo[array[i]] += 1;
   setTimeout(function () {
     animatedArray[array[i]] += 1/denominator;
-
+    //console.log('ARRAY[I]', array[i])
     document.getElementById("test").innerHTML = array;
 
     var children = document.getElementById("histogramContainerId").childElementCount; //finds number divs
 
-    for(j=0; j<children; j++){ //loops though the divs
-      var t = document.getElementById(""+j);
-      var p = document.getElementById("p"+j);
-      p.innerHTML = histo[j];
-      t.style.height = (animatedArray[j] * 100) + "%";
-    }
+    var j = array[i];
+    var k = array[i-1];
+    var previousDiv = document.getElementById(""+k);
+    var currentDiv = document.getElementById(""+j);
+    var currentP = document.getElementById("p"+j);
+
+    currentP.innerHTML = histo[j];
+    currentDiv.style.height = (animatedArray[j] * 100) + "%";
+
+    if(i-1>-1){previousDiv.classList.toggle("selectedHistogram");}
+    currentDiv.classList.toggle("selectedHistogram");
 
     animateChange(++i, array, denominator);
-  }, 8000/array.length);
+  }, seconds * 1000 /array.length);
 }
