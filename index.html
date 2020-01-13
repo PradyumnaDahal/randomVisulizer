@@ -4,37 +4,60 @@
 </head>
 <body>
   <h1>Randomizer Visulizer</h1>
-  <button type="button" name="button" onclick="randomJava.animate()">Animate</button>
-  <button type="button" name="button" onclick="randomJava.changeToJavaScriptRandom(0, 10, 500)">New Java Random</button>
-  <button type="button" name="button" onclick="randomJava.changeToLinearCongruentialGenerator(9, 4, 1, 27, 400)">New Lenear Random</button>
-  <button type="button" name="button" onclick="randomJava.changeToMiddleSquare(0, 10, 500))">New Middle Square Random</button>
+  <button type="button" name="button" onclick="randomO.animate()">Animate</button>
+  <button type="button" name="button" onclick="randomO.changeToJavaScriptRandom(0, 10, 500)">New Java Random</button>
+  <button type="button" name="button" onclick="randomO.changeToJavaScriptRandomConvertedToBinary(0, 10, 500)">PNew Java Random</button>
+  <button type="button" name="button" onclick="randomO.changeToLinearCongruentialGenerator(9, 4, 1, 400)">New Lenear Random</button>
+  <button type="button" name="button" onclick="randomO.changeToMiddleSquare(0, 10, 500))">New Middle Square Random</button>
+  <button type="button" name="button" onclick="randomO.changeToBlumBlumShub(6007, 8011, 1, 10, 8000)">New Blum Blum Shub Random</button>
   <input type="text" name="" value="8" id="seconds">
+  <input type="text" name="" value="" id="seed">
+
   <div id="histogramContainerId" class="histogramContainer">
   </div>
 
   <p id="test" style="display:block;">Test</p>
+  <p id="periodLength">a</p>
+  <p>all randoms converted to 1 and 0 creating 16 bit then conveted decimal and divied by 2^16</p>
 
 
   <div>
-    <script src="histogram.js"></script>
-    <script src="HistogramDivCreator.js"></script>
+
     <script src="LinearCongruentialGenerator.js"></script>
+    <script src="functions.js"></script>
     <script src="JavaScriptRandom.js"></script>
+    <script src="JavaScriptRandomConvertedToBinary.js"></script>
     <script src="MiddleSquare.js"></script>
     <script src="Manuplate.js"></script>
+    <script src="BlumBlumShub.js"></script>
+    <script src="AnimateHistogram.js"></script>
+    <script src="HistogramDivCreator.js"></script>
+    <script type="text/javascript">
+      //inilitize random function
+      const randomO = new random(javaScriptRandom(0, 10, 500));
+    </script>
+
     <script type="text/javascript">
       //linearCongruentialGenerator(modulus, multiplier, increment, seed, times)
       //var c = linearCongruentialGenerator(9, 4, 1, 27, 400);
       //changeHistogram(c);
       //c = javaScriptRandom(0, 10, 1000);
 
-      const randomJava = new random(javaScriptRandom(0, 10, 500));
-      console.log(randomJava.list);
-      randomJava.animate();
+      const r = new random(javaScriptRandom(0, 10, 500));
+      //console.log(randomJava.list);
+      //randomJava.animate();
+
+
+      //const r = new random(blumBlumShub(6007, 8011, 21312,1,10,3321));
+
+      //r.animate();
 
       //const randomlinear = new random(linearCongruentialGenerator(9, 4, 1, 27, 400));
       //randomlinear.animate();
 
+    </script>
+    <script type="text/javascript">
+      document.getElementById("seed").value = range(Math.random(), 100, 200);
     </script>
   </div>
 </body>
