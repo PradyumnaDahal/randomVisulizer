@@ -1,7 +1,7 @@
 function createHistogramDivs(list){
   var container = document.getElementById("histogramContainerId");
   container.innerHTML="";
-
+  console.log(list);
   list = removeDuplicates(list);
   list = list.sort(function(a, b){return a-b}); //creates unique list ordered
 

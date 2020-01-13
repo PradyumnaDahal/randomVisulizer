@@ -23,6 +23,10 @@ function nextPrime(x){
 }
 
 function range(value, min, max){
+  console.log(value,min,max);
+  min = parseInt(min);
+  max = parseInt(max);
+
   return Math.floor(value * (max - min) ) + min;
 }
 
@@ -35,5 +39,11 @@ function findPeriod(array){
       return unique.length;
     }
   }
+}
 
+function makeBlumInteger(x){
+  //while(!((x % 4) == 3 && isPrime(x))){
+    //x = nextPrime(x+1);
+  //}
+  return nextPrime(x);
 }

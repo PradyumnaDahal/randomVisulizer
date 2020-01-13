@@ -5,13 +5,18 @@
 <body>
   <h1>Randomizer Visulizer</h1>
   <button type="button" name="button" onclick="randomO.animate()">Animate</button>
-  <button type="button" name="button" onclick="randomO.changeToJavaScriptRandom(0, 10, 500)">New Java Random</button>
-  <button type="button" name="button" onclick="randomO.changeToJavaScriptRandomConvertedToBinary(0, 10, 500)">PNew Java Random</button>
+  <button type="button" name="button" onclick="randomO.changeToJavaScriptRandom()">New Java Random</button>
+  <button type="button" name="button" onclick="randomO.changeToJavaScriptRandomConvertedToBinary()">PNew Java Random</button>
   <button type="button" name="button" onclick="randomO.changeToLinearCongruentialGenerator(9, 4, 1, 400)">New Lenear Random</button>
   <button type="button" name="button" onclick="randomO.changeToMiddleSquare(0, 10, 500))">New Middle Square Random</button>
-  <button type="button" name="button" onclick="randomO.changeToBlumBlumShub(6007, 8011, 1, 10, 8000)">New Blum Blum Shub Random</button>
-  <input type="text" name="" value="8" id="seconds">
-  <input type="text" name="" value="" id="seed">
+  <button type="button" name="button" onclick="randomO.changeToBlumBlumShub()">New Blum Blum Shub Random</button>
+  <input type="text" placeholder="Seconds(8)" value="" id="secondsInput">
+  <input type="text" placeholder="seed" value="" id="seedInput">
+  <input type="text" placeholder="prime2" value="" id="blumInputX">
+  <input type="text" placeholder="prime2" value="" id="blumInputY">
+  <input type="text" placeholder="maxmimum value" value="" id="maxInput">
+  <input type="text" placeholder="minimum value" value="" id="minInput">
+  <input type="text" placeholder="How many times" value="" id="timesInput">
 
   <div id="histogramContainerId" class="histogramContainer">
   </div>
@@ -57,7 +62,7 @@
 
     </script>
     <script type="text/javascript">
-      document.getElementById("seed").value = range(Math.random(), 100, 200);
+      document.getElementById("seedInput").value = range(Math.random(), 100, 200);
     </script>
   </div>
 </body>

@@ -25,7 +25,7 @@ function changeHistogram(array){
 
   animatedArray = new Array(list.length).fill(0);
   histo = new Array(list.length).fill(0);
-  seconds = document.getElementById("seconds").value;
+  seconds = document.getElementById("secondsInput").value;
   animateChange(0,array, denominator);
 }
 
