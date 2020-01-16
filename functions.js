@@ -23,10 +23,9 @@ function nextPrime(x){
 }
 
 function range(value, min, max){
-  console.log(value,min,max);
   min = parseInt(min);
   max = parseInt(max);
-
+  //console.log(value,min,max);
   return Math.floor(value * (max - min) ) + min;
 }
 

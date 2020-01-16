@@ -38,13 +38,13 @@ class random{
     //this.animate();
   }
   changeToBlumBlumShub(){
-    var min = document.getElementById("minInput").value;
-    var max = document.getElementById("maxInput").value;
+    var min = "" + document.getElementById("minInput").value;
+    var max = "" + document.getElementById("maxInput").value;
     max++;
-    var times = document.getElementById("timesInput").value;
-    var seed = document.getElementById("seedInput").value;
-    var prime1 = document.getElementById("blumInputX").value;
-    var prime2 = document.getElementById("blumInputY").value;
+    var times = "" + document.getElementById("timesInput").value;
+    var seed = "" + document.getElementById("seedInput").value;
+    var prime1 = "" + document.getElementById("blumInputX").value;
+    var prime2 = "" + document.getElementById("blumInputY").value;
 
     this.randomList = blumBlumShub(prime1, prime2, seed, min, max, times);
   }
