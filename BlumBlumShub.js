@@ -26,16 +26,16 @@ function blumBlumShub(prime1, prime2, seed, min, max, times){
       //console.log(xn.toString());
       xn = xn.mod(m.toString());
     //  console.log(xn.toString());
-      result.push(xn.toString());
+      //result.push(xn.toString());
       //console.log(i*16+j,xn);
       blumBlumShubNumbers.push(xn.valueOf());
       binary += xn.mod(2).valueOf();
       //console.log(binary)
     }
-    /*var ran = parseInt(binary, 2);
+    var ran = parseInt(binary, 2);
     ran = ran / 65536;
     ran = range(ran,min,max);
-    result.push(ran);*/
+    result.push(ran);
     //result.push(xn.toString());
   }
   console.log(result);
