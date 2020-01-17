@@ -20,7 +20,7 @@ function nextPrime(x){
     return bigInt(2);
   }
   while(!isPrime(x.toString())){
-    console.log("a");
+    //console.log("a");
     x = x.add("1");
   }
   return x.toString();
@@ -29,6 +29,7 @@ function nextPrime(x){
 function range(value, min, max){
   min = parseInt(min);
   max = parseInt(max);
+  value = parseFloat(value);
   //console.log(value,min,max);
   return Math.floor(value * (max - min) ) + min;
 }
@@ -49,8 +50,8 @@ function makeBlumInteger(x){
   var c = 0;
   while(!(bigInt(x).mod(4).valueOf() == 3 && isPrime(x.toString()))){
     x = nextPrime(bigInt(x).add("1").toString());
-    console.log(++c);
+    //console.log(++c);
   }
-  console.log('X', x)
+  //console.log('X', x)
   return x.toString();
 }
