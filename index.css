@@ -1,10 +1,14 @@
 body{
   margin: 0px;
+  background-color: #eeeeee;
+}
+h1{
+  margin: 0px;
 }
 
 
 .histogram {
-  height          : 100px;
+  height: 1px;
   background-color: rgba(66, 134, 244, 0.8);
   float:left;
   /*border: 1px solid white;*/
@@ -16,12 +20,90 @@ body{
   background-color:rgba(255, 140, 105, 1.0) !important;
 }
 .histogramContainer{
-  height: 30%;
+  height: 80%;
 }
 .histogramCount{
   text-align: center;
-  color: blue;
+  color: white;
   font-weight: bold;
   font-size: 40px;
   font-size: 1vw;
+}
+
+.animateButton {
+  border: 0px solid #4CAF50;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  text-align: right;
+  font-family: "Poppins", sans-serif;
+  margin: 4px 50px;
+}
+.animateButton:hover{
+  background-color: #367c39;
+}
+
+.generatorButton{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  margin: auto 50px;
+}
+.generatorButton:hover{
+  color:#F9843F;
+}
+.buttonsContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 0px;
+  background-color: #212121;
+  margin: 0 0;
+
+}
+.inputBox{
+  background-color: #555;
+
+  color: #fff;
+  width: 60%;
+  height: 62%;
+  position: absolute;
+  display: block;
+  visibility: hidden;
+  padding: 0px 30px;
+  padding-top: 5%;
+  border-radius: 6px;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+.inputBoxContainer{
+  margin: 20px 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.inputBoxInputs{
+  display: inline;
+  width: 30%;
+  color: white;
+  font-size: 17px
+
+}
+.inputBoxInputs:nth-child(2){
+  display: inline;
+  width: 70%;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: none;
+  background-color: #666;
+  font-size: 20px;
 }

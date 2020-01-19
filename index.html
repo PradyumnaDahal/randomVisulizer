@@ -2,32 +2,82 @@
   <link rel="stylesheet" href="index.css">
   <title>Random Visulizer</title>
 </head>
-<body>
-  <h1>Randomizer Visulizer</h1>
-  <button type="button" name="button" onclick="randomO.animate()">Animate</button>
-  <button type="button" name="button" onclick="randomO.changeToJavaScriptRandom()">New Java Random</button>
-  <button type="button" name="button" onclick="randomO.changeToJavaScriptRandomConvertedToBinary()">PNew Java Random</button>
-  <button type="button" name="button" onclick="randomO.changeToLinearCongruentialGenerator(9, 4, 1, 400)">New Lenear Random</button>
-  <button type="button" name="button" onclick="randomO.changeToMiddleSquare(0, 10, 500))">New Middle Square Random</button>
-  <button type="button" name="button" onclick="randomO.changeToBlumBlumShub()">New Blum Blum Shub Random</button>
-  <input type="text" placeholder="Seconds(8)" value="" id="secondsInput">
-  <input type="text" placeholder="seed" value="" id="seedInput">
-  <input type="text" placeholder="prime1" value="" id="blumInputX">
-  <input type="text" placeholder="prime2" value="" id="blumInputY">
-  <input type="text" placeholder="maxmimum value" value="" id="maxInput">
-  <input type="text" placeholder="minimum value" value="" id="minInput">
-  <input type="text" placeholder="How many times" value="" id="timesInput">
 
-  <div id="histogramContainerId" class="histogramContainer">
+<body style="">
+
+  <div id="Nav Bar" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.8);">
+    <h1 style="background-color:#212121; color:white; padding: 10px 10px">Randomizer Visualizer</h1>
+    <div class="buttonsContainer">
+      <!--button class="generatorButtons" type="button" name="button" onclick="randomO.changeToJavaScriptRandom()">New Java Random</button-->
+      <a class="generatorButton" href="javascript:showJavaRandom()">Generate Java Random</a>
+      <a class="generatorButton" href="javascript:showBlumBlum()">Generate Blum Blum Shub Random</a>
+      <div>
+        <div class="inputBox" id="inputBoxId">
+          <button type="button" style="background-color: Transparent;border:none;float:right; margin-top:-5%;color:w;font-size:25px; font-weight: 300; font-family: Arial, sans-serif;" onclick="hideInputBox()">&#10006</button>
+          <div class="inputBoxContainer" id="inputSecondsBlock">
+            <p class="inputBoxInputs">Seconds to animate: </p>
+            <input class="inputBoxInputs" type="text" placeholder="Seconds(8)" value="" id="secondsInput">
+          </div>
+          <div class="inputBoxContainer" id="inputSeedBlock">
+            <p class="inputBoxInputs">Seed:</p>
+            <input class="inputBoxInputs" type="text" placeholder="seed" value="" id="seedInput">
+          </div>
+          <div class="inputBoxContainer" id="inputNumber1Block">
+            <p class="inputBoxInputs">Input Number 1:</p>
+            <input class="inputBoxInputs" type="text" placeholder="prime1" value="" id="blumInputX">
+          </div>
+          <div class="inputBoxContainer" id="inputNumber2Block">
+            <p class="inputBoxInputs">Input Number 2:</p>
+            <input class="inputBoxInputs" type="text" placeholder="prime2" value="" id="blumInputY">
+          </div>
+          <div class="inputBoxContainer" id="inputMaximumBlock">
+            <p class="inputBoxInputs">Maximum Output:</p>
+            <input class="inputBoxInputs" type="text" placeholder="maxmimum value" value="" id="maxInput">
+          </div>
+          <div class="inputBoxContainer" id="inputMinimumBlock">
+            <p class="inputBoxInputs">Minimum Output:</p>
+            <input class="inputBoxInputs" type="text" placeholder="minimum value" value="" id="minInput">
+          </div>
+          <div class="inputBoxContainer" id="inputTimesBlock">
+            <p class="inputBoxInputs">Number of Outputs:</p>
+            <input class="inputBoxInputs" type="text" placeholder="How many times" value="" id="timesInput">
+          </div>
+          <button class="animateButton" style="float: right; display:block" type="button" name="button" onclick="hideInputBox();randomO.changeToJavaScriptRandom()">Create List</button>
+        </div>
+      </div>
+
+      <!--div>
+      <button class="generatorButtons" type="button" name="button" onclick="randomO.changeToJavaScriptRandomConvertedToBinary()">PNew Java Random</button>
+      <button class="generatorButtons" type="button" name="button" onclick="randomO.changeToLinearCongruentialGenerator(9, 4, 1, 400)">New Lenear Random</button>
+      <button class="generatorButtons" type="button" name="button" onclick="randomO.changeToMiddleSquare(0, 10, 500))">New Middle Square Random</button>
+      <button class="generatorButtons" type="button" name="button" onclick="randomO.changeToBlumBlumShub()">New Blum Blum Shub Random</button>
+      <div-->
+      <button class="animateButton" type="button" name="button" onclick="randomO.animate()">Animate</button>
+    </div>
   </div>
+
+  <div id="histogramContainerId" class="histogramContainer"></div>
+
+  <!--div class="">
+    <input type="text" placeholder="Seconds(8)" value="" id="secondsInput">
+    <input type="text" placeholder="seed" value="" id="seedInput">
+    <input type="text" placeholder="prime1" value="" id="blumInputX">
+    <input type="text" placeholder="prime2" value="" id="blumInputY">
+    <input type="text" placeholder="maxmimum value" value="" id="maxInput">
+    <input type="text" placeholder="minimum value" value="" id="minInput">
+    <input type="text" placeholder="How many times" value="" id="timesInput">
+  </div-->
+
+
+
 
   <p id="test" style="display:block;">Test</p>
   <p id="periodLength">a</p>
-  <p>all randoms converted to 1 and 0 creating 16 bit then conveted decimal and divied by 2^16</p>
+  <p id="accuracy">random goes to the xth digit</p>
 
 
-  <div>
-
+  <div id="Script List">
+    <script src="InputBox.js"></script>
     <script src="LinearCongruentialGenerator.js"></script>
     <script src="functions.js"></script>
     <script src="JavaScriptRandom.js"></script>
@@ -41,7 +91,7 @@
     <script src="HistogramDivCreator.js"></script>
     <script type="text/javascript">
       //inilitize random function
-
+      //document.designMode = "on";
       const randomO = new random(javaScriptRandom(0, 10, 500));
     </script>
 
@@ -62,7 +112,6 @@
 
       //const randomlinear = new random(linearCongruentialGenerator(9, 4, 1, 27, 400));
       //randomlinear.animate();
-
     </script>
     <script type="text/javascript">
       document.getElementById("seedInput").value = range(Math.random(), 100, 200);
