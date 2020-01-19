@@ -24,7 +24,7 @@ function blumBlumShub(prime1, prime2, seed, min, max, times){
   if(("" + period) != "undefined"){
     document.getElementById("periodLength").innerHTML = "The Blum Blum Shub recursive series loops after " + period + " digets";
   } else {
-    document.getElementById("periodLength").innerHTML = "The Blum Blum Shub recursive series loops at unknown point after " + times;
+    document.getElementById("periodLength").innerHTML = "The Blum Blum Shub recursive series loops at an unknown point after " + times;
   }
   var decimalAccuracy = Decimal("1").dividedBy(m.toString()).tosd();
   for(i = 0; i< decimalAccuracy.length; i++){

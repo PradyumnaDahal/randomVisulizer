@@ -6,14 +6,14 @@
 <body style="">
 
   <div id="Nav Bar" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.8);">
-    <h1 style="background-color:#212121; color:white; padding: 10px 10px">Randomizer Visualizer</h1>
+    <h1 style="background-color:#191919; color:white; padding: 10px 10px">Randomizer Visualizer</h1>
     <div class="buttonsContainer">
       <!--button class="generatorButtons" type="button" name="button" onclick="randomO.changeToJavaScriptRandom()">New Java Random</button-->
       <a class="generatorButton" href="javascript:showJavaRandom()">Generate Java Random</a>
       <a class="generatorButton" href="javascript:showBlumBlum()">Generate Blum Blum Shub Random</a>
       <div>
         <div class="inputBox" id="inputBoxId">
-          <button type="button" style="background-color: Transparent;border:none;float:right; margin-top:-5%;color:w;font-size:25px; font-weight: 300; font-family: Arial, sans-serif;" onclick="hideInputBox()">&#10006</button>
+          <button type="button" style="color: white;background-color: Transparent;border:none;float:right; margin-top:-5%;color:w;font-size:25px; font-weight: 300; font-family: Arial, sans-serif;" onclick="hideInputBox()">&#10006</button>
           <div class="inputBoxContainer" id="inputSecondsBlock">
             <p class="inputBoxInputs">Seconds to animate: </p>
             <input class="inputBoxInputs" type="text" placeholder="Seconds(8)" value="" id="secondsInput">
@@ -42,7 +42,7 @@
             <p class="inputBoxInputs">Number of Outputs:</p>
             <input class="inputBoxInputs" type="text" placeholder="How many times" value="" id="timesInput">
           </div>
-          <button class="animateButton" style="float: right; display:block" type="button" name="button" onclick="hideInputBox();randomO.changeToJavaScriptRandom()">Create List</button>
+          <button class="animateButton" style="float: right; display:block" type="button" name="button" onclick="hideInputBox();randomO.changeTo(generator)">Create List</button>
         </div>
       </div>
 

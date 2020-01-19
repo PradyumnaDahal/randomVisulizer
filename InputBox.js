@@ -1,3 +1,4 @@
+var generator;
 function showBlumBlum(){
   document.getElementById("inputBoxId").style.visibility = "visible";
   document.getElementById("inputBoxId").style.height = "62%";
@@ -8,6 +9,7 @@ function showBlumBlum(){
   document.getElementById("inputMaximumBlock").style.display = "flex";
   document.getElementById("inputMinimumBlock").style.display = "flex";
   document.getElementById("inputTimesBlock").style.display = "flex";
+  generator = "blum";
 }
 function hideInputBox(){
   document.getElementById("inputBoxId").style.visibility = "hidden";
@@ -23,4 +25,5 @@ function showJavaRandom(){
   document.getElementById("inputMaximumBlock").style.display = "flex";
   document.getElementById("inputMinimumBlock").style.display = "flex";
   document.getElementById("inputTimesBlock").style.display = "flex";
+  generator = "javascript";
 }

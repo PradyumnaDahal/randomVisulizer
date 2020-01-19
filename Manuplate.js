@@ -12,6 +12,7 @@ class random{
     createHistogramDivs(this.randomList);
     changeHistogram(this.randomList);
   }
+
   changeToLinearCongruentialGenerator(modulus, multiplier, increment, seed, times){
     var seed = document.getElementById("seedInput").value;
     this.randomList = linearCongruentialGenerator(modulus, multiplier, increment, seed, times);
@@ -47,6 +48,18 @@ class random{
     var prime2 = "" + document.getElementById("blumInputY").value;
 
     this.randomList = blumBlumShub(prime1, prime2, seed, min, max, times);
+  }
+  changeTo(x){
+    switch (x) {
+      case "blum":
+        this.changeToBlumBlumShub();
+        break;
+      case "javascript":
+        this.changeToJavaScriptRandom();
+        break;
+      default:
+
+    }
   }
   get list(){
     return this.randomList;
