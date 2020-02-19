@@ -1,4 +1,4 @@
-body{
+ body{
   margin: 0px;
   background-color: #eeeeee;
 }
@@ -48,6 +48,23 @@ h1{
 .animateButton:hover{
   background-color: #367c39;
 }
+.createListButton {
+  border: 0px solid #4CAF50;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  margin: 20px 30px;
+  align: right;
+}
+.createListButton:hover{
+  background-color: #367c39;
+}
 
 .generatorButton{
   text-decoration: none;
@@ -70,22 +87,25 @@ h1{
 }
 .inputBox{
   background-color: #555;
-
-  color: #fff;
   width: 60%;
+  margin: auto;
+  margin-top: 50px;
+  padding: 0px 30px;
+  /*color: #fff;
+
   height: 62%;
   position: absolute;
   display: block;
   visibility: hidden;
-  padding: 0px 30px;
-  padding-top: 5%;
+
+
   border-radius: 6px;
   z-index: 1;
   left: 0;
   right: 0;
   bottom: 0;
   top: 0;
-  margin: auto;
+  margin: auto;*/
 }
 .inputBoxContainer{
   margin: 20px 5px;
@@ -107,4 +127,16 @@ h1{
   border: none;
   background-color: #666;
   font-size: 20px;
+}
+.xbutton{
+  color: white;
+  background-color: Transparent;
+  border:none;
+  display:block;
+  margin-left:auto;
+  padding-top: 15px;
+  padding-right: 15px;
+  font-size:25px;
+  font-weight: 300;
+  font-family: Arial, sans-serif;
 }

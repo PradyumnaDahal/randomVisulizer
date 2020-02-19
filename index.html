@@ -6,47 +6,16 @@
 </head>
 
 <body style="">
+  <div class="instructions">
 
+  </div>
   <div id="Nav Bar" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.8);">
     <h1 style="background-color:#191919; color:white; padding: 10px 10px">Randomizer Visualizer</h1>
     <div class="buttonsContainer">
       <!--button class="generatorButtons" type="button" name="button" onclick="randomO.changeToJavaScriptRandom()">New Java Random</button-->
       <a class="generatorButton" href="javascript:showJavaRandom()">Generate Java Random</a>
       <a class="generatorButton" href="javascript:showBlumBlum()">Generate Blum Blum Shub Random</a>
-      <div>
-        <div class="inputBox" id="inputBoxId">
-          <button type="button" style="color: white;background-color: Transparent;border:none;float:right; margin-top:-5%;color:w;font-size:25px; font-weight: 300; font-family: Arial, sans-serif;" onclick="hideInputBox()">&#10006</button>
-          <div class="inputBoxContainer" id="inputSecondsBlock">
-            <p class="inputBoxInputs">Seconds to animate: </p>
-            <input class="inputBoxInputs" type="text" placeholder="Seconds(8)" value="" id="secondsInput">
-          </div>
-          <div class="inputBoxContainer" id="inputSeedBlock">
-            <p class="inputBoxInputs">Seed:</p>
-            <input class="inputBoxInputs" type="text" placeholder="seed" value="" id="seedInput">
-          </div>
-          <div class="inputBoxContainer" id="inputNumber1Block">
-            <p class="inputBoxInputs">Input Number 1:</p>
-            <input class="inputBoxInputs" type="text" placeholder="prime1" value="" id="blumInputX">
-          </div>
-          <div class="inputBoxContainer" id="inputNumber2Block">
-            <p class="inputBoxInputs">Input Number 2:</p>
-            <input class="inputBoxInputs" type="text" placeholder="prime2" value="" id="blumInputY">
-          </div>
-          <div class="inputBoxContainer" id="inputMaximumBlock">
-            <p class="inputBoxInputs">Maximum Output:</p>
-            <input class="inputBoxInputs" type="text" placeholder="maxmimum value" value="" id="maxInput">
-          </div>
-          <div class="inputBoxContainer" id="inputMinimumBlock">
-            <p class="inputBoxInputs">Minimum Output:</p>
-            <input class="inputBoxInputs" type="text" placeholder="minimum value" value="" id="minInput">
-          </div>
-          <div class="inputBoxContainer" id="inputTimesBlock">
-            <p class="inputBoxInputs">Number of Outputs:</p>
-            <input class="inputBoxInputs" type="text" placeholder="How many times" value="" id="timesInput">
-          </div>
-          <button class="animateButton" style="float: right; display:block" type="button" name="button" onclick="hideInputBox();randomO.changeTo(generator)">Create List</button>
-        </div>
-      </div>
+
 
       <!--div>
       <button class="generatorButtons" type="button" name="button" onclick="randomO.changeToJavaScriptRandomConvertedToBinary()">PNew Java Random</button>
@@ -55,6 +24,42 @@
       <button class="generatorButtons" type="button" name="button" onclick="randomO.changeToBlumBlumShub()">New Blum Blum Shub Random</button>
       <div-->
       <button class="animateButton" type="button" name="button" onclick="randomO.animate()">Animate</button>
+    </div>
+  </div>
+  <div style="width:100%">
+    <div class="inputBox" id="inputBoxId">
+      <button type="button" style="" class="xbutton" onclick="hideInputBox()">&#10006</button>
+      <div class="inputBoxContainer" id="inputSecondsBlock">
+        <p class="inputBoxInputs">Seconds to animate: </p>
+        <input class="inputBoxInputs" type="text" placeholder="Seconds(8)" value="" id="secondsInput">
+      </div>
+      <div class="inputBoxContainer" id="inputSeedBlock">
+        <p class="inputBoxInputs">Seed:</p>
+        <input class="inputBoxInputs" type="text" placeholder="seed" value="" id="seedInput">
+      </div>
+      <div class="inputBoxContainer" id="inputNumber1Block">
+        <p class="inputBoxInputs">Input Number 1:</p>
+        <input class="inputBoxInputs" type="text" placeholder="prime1" value="" id="blumInputX">
+      </div>
+      <div class="inputBoxContainer" id="inputNumber2Block">
+        <p class="inputBoxInputs">Input Number 2:</p>
+        <input class="inputBoxInputs" type="text" placeholder="prime2" value="" id="blumInputY">
+      </div>
+      <div class="inputBoxContainer" id="inputMaximumBlock">
+        <p class="inputBoxInputs">Maximum Output:</p>
+        <input class="inputBoxInputs" type="text" placeholder="maxmimum value" value="" id="maxInput">
+      </div>
+      <div class="inputBoxContainer" id="inputMinimumBlock">
+        <p class="inputBoxInputs">Minimum Output:</p>
+        <input class="inputBoxInputs" type="text" placeholder="minimum value" value="" id="minInput">
+      </div>
+      <div class="inputBoxContainer" id="inputTimesBlock">
+        <p class="inputBoxInputs">Number of Outputs:</p>
+        <input class="inputBoxInputs" type="text" placeholder="How many times" value="" id="timesInput">
+      </div>
+      <div class="" style="text-align: right;">
+        <button class="createListButton" style="" type="button" name="button" onclick="hideInputBox();randomO.changeTo(generator)">Create List</button>
+      </div>
     </div>
   </div>
 
@@ -73,9 +78,9 @@
 
 
 
-  <p id="test" style="display:block;">Test</p>
-  <p id="periodLength">a</p>
-  <p id="accuracy">random goes to the xth digit</p>
+  <p id="test" style="display:block;"></p>
+  <p id="periodLength"></p>
+  <p id="accuracy"></p>
 
 
   <div id="Script List">

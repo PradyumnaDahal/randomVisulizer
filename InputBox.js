@@ -1,7 +1,6 @@
 var generator;
 function showBlumBlum(){
   document.getElementById("inputBoxId").style.visibility = "visible";
-  document.getElementById("inputBoxId").style.height = "62%";
   document.getElementById("inputSecondsBlock").style.display = "flex";
   document.getElementById("inputNumber1Block").style.display = "flex";
   document.getElementById("inputNumber2Block").style.display = "flex";
@@ -17,7 +16,6 @@ function hideInputBox(){
 //
 function showJavaRandom(){
   document.getElementById("inputBoxId").style.visibility = "visible";
-  document.getElementById("inputBoxId").style.height = "40%";
   document.getElementById("inputSecondsBlock").style.display = "flex";
   document.getElementById("inputNumber1Block").style.display = "none";
   document.getElementById("inputNumber2Block").style.display = "none";
