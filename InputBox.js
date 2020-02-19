@@ -1,6 +1,6 @@
 var generator;
 function showBlumBlum(){
-  document.getElementById("inputBoxId").style.visibility = "visible";
+  document.getElementById("inputBoxId").style.display = "block";
   document.getElementById("inputSecondsBlock").style.display = "flex";
   document.getElementById("inputNumber1Block").style.display = "flex";
   document.getElementById("inputNumber2Block").style.display = "flex";
@@ -11,11 +11,11 @@ function showBlumBlum(){
   generator = "blum";
 }
 function hideInputBox(){
-  document.getElementById("inputBoxId").style.visibility = "hidden";
+  document.getElementById("inputBoxId").style.display = "none";
 }
 //
 function showJavaRandom(){
-  document.getElementById("inputBoxId").style.visibility = "visible";
+  document.getElementById("inputBoxId").style.display = "block";
   document.getElementById("inputSecondsBlock").style.display = "flex";
   document.getElementById("inputNumber1Block").style.display = "none";
   document.getElementById("inputNumber2Block").style.display = "none";
