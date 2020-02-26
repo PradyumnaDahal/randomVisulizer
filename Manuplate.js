@@ -12,7 +12,10 @@ class random{
     createHistogramDivs(this.randomList);
     changeHistogram(this.randomList);
   }
-
+  changeToBifuraction(a,b,c,d){
+    
+    this.randomList = bifurcation(a,b,c,d);
+  }
   changeToLinearCongruentialGenerator(modulus, multiplier, increment, seed, times){
     var seed = document.getElementById("seedInput").value;
     this.randomList = linearCongruentialGenerator(modulus, multiplier, increment, seed, times);

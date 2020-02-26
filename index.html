@@ -9,15 +9,13 @@
   <div class="instructions">
 
   </div>
-  <canvas id="myCanvas" width="2000" height="800"
-  style="border:1px solid #c3c3c3;">this sucks</canvas>
-
   <div id="Nav Bar" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.8);">
     <h1 style="background-color:#191919; color:white; padding: 10px 10px">Randomizer Visualizer</h1>
     <div class="buttonsContainer">
       <!--button class="generatorButtons" type="button" name="button" onclick="randomO.changeToJavaScriptRandom()">New Java Random</button-->
       <a class="generatorButton" href="javascript:showJavaRandom()">Generate JavaScript Random</a>
       <a class="generatorButton" href="javascript:showBlumBlum()">Generate Blum Blum Shub Random</a>
+      <a class="generatorButton" href="b.html">Bifurcation diagram</a>
 
 
       <!--div>
@@ -106,6 +104,7 @@
       //inilitize random function
       //document.designMode = "on";
       const randomO = new random(javaScriptRandom(0, 10, 500));
+      randomO.changeToBifuraction("3.58",.4,1000,100);
     </script>
 
     <script type="text/javascript">
